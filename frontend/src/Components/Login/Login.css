@@ -1,0 +1,103 @@
+/* Common Keyframes */
+@keyframes boxAnimation {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Login Component CSS */
+.login {
+  height: 100vh;
+  /* background-image: linear-gradient(to right, #1b1b19, #aa98ee); */
+  background-image: url("../../Assets/img/bg3.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2vmax;
+  box-sizing: border-box;
+}
+
+.loginForm {
+  background-color: rgb(194 194 199);
+  height: 100%;
+  width: 40%;
+  border-radius: 30px;
+  box-sizing: border-box;
+  padding: 2vmax;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: slideUp 1s ease-in-out, boxAnimation 4s infinite;
+}
+
+.loginForm > input {
+  box-sizing: border-box;
+  padding: 1vmax 2vmax;
+  width: 80%;
+  border-radius: 40px;
+  border: 1px solid #cfabab;
+  margin: 2vmax;
+  font: 100 1.2rem "Roboto", sans-serif;
+  outline: none;
+}
+
+.loginForm > button,
+.loginForm > a {
+  cursor: pointer;
+  padding: 1vmax 2vmax;
+  width: 80%;
+  border-radius: 40px;
+  border: none;
+  margin: 2vmax;
+  font: 100 1.2rem "Roboto", sans-serif;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(255, 252, 252);
+  background-color: #4caf50;
+}
+
+.loginForm > button:hover,
+.loginForm > a:hover {
+  background-color: #45a049;
+}
+
+.loginForm > .title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2vmax;
+  color: #333;
+}
+
+@media screen and (max-width: 600px) {
+  .loginForm {
+    width: 100%;
+    animation: slideUpMobile 1s ease-in-out, boxAnimationMobile 4s infinite;
+  }
+
+  .loginForm > input {
+    padding: 4vw 8vw;
+    margin: 2vmax;
+    font: 100 1.2rem "Roboto", sans-serif;
+  }
+
+  .loginForm > a {
+    align-self: center;
+  }
+
+  @keyframes boxAnimationMobile {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+}
+.title{
+  color: white;
+}

@@ -1,0 +1,138 @@
+/* Common Keyframes */
+@keyframes boxAnimation {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Register Component CSS */
+.register {
+  min-height: 100vh;
+  /* background-image: linear-gradient(to right, #1b1b19, #aa98ee); */
+  background-image: url("../../Assets/img/bg3.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2vmax;
+  box-sizing: border-box;
+}
+
+.registerForm {
+  background-color: rgb(0, 0, 0);
+  /* background-color: rgb(202, 234, 232); */
+  background-color: rgb(194 194 199);
+  width: 40%;
+  border-radius: 30px;
+  box-sizing: border-box;
+  padding: 2vmax;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: slideUp 1s ease-in-out, boxAnimation 4s infinite; /* Added animation */
+}
+
+.registerInputs {
+  box-sizing: border-box;
+  padding: 0.8vmax 1.6vmax;
+  width: 80%;
+  border-radius: 30px;
+  border: 1px solid #cfabab;
+  margin: 1vmax;
+  font: 100 1rem "Roboto", sans-serif;
+  outline: none;
+}
+
+.registerForm > input[type="file"] {
+  border-radius: 30px;
+  margin: 1vmax;
+}
+
+.registerForm > input[type="file"]::-webkit-file-upload-button {
+  background-color: #4caf50;
+  color: white;
+  width: 100%;
+  padding: 1vmax;
+  border-radius: 30px;
+  border: none;
+  font: 100 1rem "Roboto", sans-serif;
+}
+
+.registerButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.registerForm > button,
+.registerForm > a {
+  cursor: pointer;
+  padding: 1vmax 2vmax;
+  width: 80%;
+  border-radius: 30px;
+  border: none;
+  margin: 1vmax;
+  font: 100 1rem "Roboto", sans-serif;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background-color: #4caf50;
+}
+
+.registerForm > button:hover,
+.registerForm > a:hover {
+  background-color: #45a049;
+}
+
+.registerForm > a {
+  align-self: center;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.342);
+  margin: 1vmax;
+}
+
+@media screen and (max-width: 600px) {
+  .registerForm {
+    width: 100%;
+    animation: slideUpMobile 1s ease-in-out, boxAnimationMobile 4s infinite;
+  }
+
+  .registerInputs {
+    padding: 2vw 4vw;
+    margin: 2vmax;
+    font: 100 1rem "Roboto", sans-serif;
+  }
+
+  .registerForm > input[type="file"] {
+    width: 100%;
+  }
+
+  .registerForm > input[type="file"]::-webkit-file-upload-button {
+    width: 70%;
+  }
+
+  .registerButtons > button,
+  .registerButtons > a {
+    width: 100%;
+  }
+
+  .registerForm > a {
+    align-self: center;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.342);
+    margin: 2vmax;
+  }
+
+  @keyframes boxAnimationMobile {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+}
